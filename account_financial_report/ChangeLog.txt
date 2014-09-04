@@ -1,0 +1,5 @@
+Version					Date						Author				 	Implementations
+
+2.1						26/08/2014					Omkar Pakki				1. New Field temp_periods Added.
+																			2. Over Ride Create Method and append Periods to temp_periods and make periods fiele empty.
+																			3. Modified Report Names.			

@@ -1,0 +1,9 @@
+V 1.1 Date 8/12/2014
+     By Omkar Pakki
+     	* Modified the Variable Amount to Total in the Report.
+     	* Changed the Fields Amount to Balance Amount in the PDF Report.
+     	* Added New Field Total Amount in the PDF Report.
+
+V 1.2 Date 8/14/2014
+     By Omkar Pakki
+     	* Adjusted All the Borders

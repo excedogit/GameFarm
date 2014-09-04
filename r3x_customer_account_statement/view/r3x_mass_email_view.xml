@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="r3x_open_invoices_webkit_xls_wizard_view" model="ir.ui.view">
+      <field name="name">open.invoices.webkit.xls</field>
+      <field name="model">open.invoices.webkit</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="account_financial_report_webkit.account_open_invoices_view_webkit"/>
+      <field name="arch" type="xml">
+       <data>
+      	<xpath expr="//field[@name='partner_ids']" position="before">
+      	<group>
+      		<field name="filter_by_payment"/>
+      		<field name="email_template"/>
+      		<field name="report_print" string="Print Statement"/>
+      		<button name="filter_data" type="object" string="Filter Customer" context="{'filter_by_payment':filter_by_payment}"  class="oe_highlight" attrs="{'invisible':[('filter_by_payment','=',False)]}"/>
+        </group>
+      	</xpath>
+		<xpath expr="//field[@name='partner_ids']" position="replace">
+			<field name='partner_ids' widget="many2many">
+				<tree>
+					<field name="name"/>
+					<field name="ref"/>
+					<field name="email"/>
+					<field name="credit" string="Balance"/>
+				</tree>
+			</field>
+		</xpath>
+		
+          <button string="Print" position="after">
+            or
+          <label string="or"  attrs="{'invisible':[('email_template','=',False)]}"/>
+          <button name="custom_send_email" string="Send Email And Print Letters" icon="terp-mail-replied" type="object" class="oe_highlight" attrs="{'invisible':[('email_template','=',False)]}"/>
+			or
+          </button>
+        </data>
+      </field>
+    </record>
+
+
+<!-- Menu Over ride to Change the Menu Name-->
+        <record id="action_account_open_invoices_menu_webkit" model="ir.actions.act_window">
+            <field name="name">Open Invoices/Customer Statements</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">open.invoices.webkit</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_financial_report_webkit.account_open_invoices_view_webkit"/>
+            <field name="target">new</field>
+        </record>
+
+	    <menuitem icon="STOCK_PRINT" name="Open Invoices/Customer Statements"
+            parent="account.next_id_22" action="action_account_open_invoices_menu_webkit"
+            groups="account.group_account_manager,account.group_account_user" 
+            id="account_financial_report_webkit.menu_account_open_invoices"/>
+
+
+  </data>
+</openerp>

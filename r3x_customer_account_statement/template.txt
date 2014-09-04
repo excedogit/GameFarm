@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gamefarm</title>
+<style>
+body{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px; 
+}
+a{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#C41230; text-decoration:none;}
+p, li, div {font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px;}
+</style>
+
+</head>
+
+<body bgcolor="#f0f0f0">
+<table width="562" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/h_red.jpg" width="100%" height="75" alt="Game Farm Logo" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background:#ffffff; border-left:#999999 solid 1px; border-right:#999999 solid 1px; font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px; ">
+    <table width="560" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding-left:25px; padding-right:25px;">
+       </td>
+      </tr>
+      <tr>
+        <td align="left" valign="middle" style="padding-left:25px; padding-right:25px; padding-top:15px; padding-bottom:5px; font-family:Arial, Helvetica, sans-serif; color:#C41230; font-size:24px; line-height:normal;">
+               Customer Statement<br />
+         <font style="font-family:Arial, Helvetica, sans-serif; color:#666666; font-size:16px; font-weight:normal;">Outstanding Balances </font></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background:#ffffff; border-left:#999999 solid 1px; border-right:#999999 solid 1px; font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px; padding-left:25px; padding-right:25px; "><img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/light_bar.jpg" width="416" height="1" /></td>
+  </tr>
+  <tr>
+    <td height="30" colspan="2" align="right" valign="middle" style="background:#ffffff; border-left:#999999 solid 1px; border-right:#999999 solid 1px; font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px; padding-left:25px; padding-right:25px; "></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="background:#ffffff; border-left:#999999 solid 1px; border-right:#999999 solid 1px; font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px; padding-left:25px; padding-right:25px; ">
+    
+    <p style="font-family:Arial, Helvetica, sans-serif; color:#666666; font-size:14px; font-weight:bold;">Dear ${object.name},</p>
+      <p style="font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px;">Please find enclosed account statement.If any further queries please contact gamefarm accounts dept or email to <b>debtors@gamefarm.com.au</b></p>
+<p style="font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px;">Best Regards,</p>
+<p style="font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px;">${user.name}</p>
+
+ <p style="font-family:Arial, Helvetica, sans-serif; color:#666666; line-height:18px; font-size:12px;">${object.get_customer_table_html() | safe}</p>
+
+</td>
+
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+    <td style="background-color: #a40a1a;color: #fff;
+line-height: 20px; padding: 10px 10px 10px 25px;"><span style="font-size:16px;line-height:25px;">www.gamefarm.com.au</span><br />
+      51 Crosslands Rd, Galston 2159, Australia <br />
+ P +61 2 9653 4600 | F +61 2 9653 1655</td>
+    <td style="background-color: #a40a1a;color: #fff;
+line-height: 20px;padding: 10px 0px 10px 90px;" ><span style="font-size:16px;line-height:25px;" >Direct Debit</span><br />
+
+Bank BSB : 082 167<br />
+
+Account : 606423972</td>
+    </tr>
+    </table></td>
+  </tr>
+  <tr> 	 
+    <td colspan="2" style="background-color:#a40a1a;">
+    <table width="562" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+        </tr>
+             <tr>
+               <td width="100">&nbsp;</td>
+               <td width="195"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                 <tbody>
+                   <tr>
+                     <td>&nbsp;</td>
+                     <td><a href="http://gamefarm.createsend1.com/t/d-l-vikhtd-mdkkkjlh-j/" target="_blank"><img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/ico_facebook.png" width="35" height="36" border="0" alt="Facebook" /></a></td>
+                     <td>&nbsp;</td>
+                     <td><a href="http://gamefarm.createsend1.com/t/d-l-vikhtd-mdkkkjlh-t/" target="_blank"><img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/twitter.png" width="35" height="36" border="0" alt="Twitter" /></a></td>
+                     <td>&nbsp;</td>
+                     <td><a href="http://gamefarm.createsend1.com/t/d-l-vikhtd-mdkkkjlh-i/" target="_blank"><img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/rss.png" width="35" height="36" border="0" alt="RSS" /></a></td>
+                     <td>&nbsp;</td>
+                     <td><a href="http://gamefarm.createsend1.com/t/d-l-vikhtd-mdkkkjlh-d/" target="_blank"><img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/youtube.png" width="35" height="36" border="0" alt="YouTube" /></a></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+               <td width="10">|</td>
+               <td width="290"><a href="http://gamefarm.createsend1.com/t/d-l-vikhtd-mdkkkjlh-h/"><img src="http://i6.createsend1.com/ti/d/9A/95F/B06/114337/images/btn_visit.gif" width="160" height="29" border="0" alt="Visit Website" /></a></td>
+                </tr>
+               </table></td>
+  </tr>
+<!-- Testing the Requirement At the Below... -->  
+  <tr>
+    <td><img src="http://erp.gamefarm.com.au:8069/web/static/src/email_img/btm_line.gif" width="100%" height="17" /></td>
+  </tr>
+
+  <tr>
+    <td style="padding-top:5px; padding-left:25px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#666666;">&copy; 2014 Game Farm<font style="font-family:Arial, Helvetica, sans-serif; font-size:11px;"> <font style="color:#999999;">|</font> <a href="http://www.ru3ix.com.au/" style="text-decoration:none;color:#C41230; font-size:11px;">Powered by RU3IX ERP</a></font>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_partner_inherit_followup_form" model="ir.ui.view">
+            <field name="name">res.partner.followup.form.inherit</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="model">res.partner</field>
+            <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="arch" type="xml" >
+                <page string="Accounting" position="after" version="7.0">
+                    <page string="Customer Statement" groups="account.group_account_invoice" name="followup_tab" attrs="{'invisible':['|',('is_company','=',False),('supplier','=',True)]}">
+                    	<div class="oe_right oe_button_box" name="followup_button">
+                            <button name="do_customer_statement_button_print" type="object" string="Print Customer Statement" groups="account.group_account_user" attrs="{'invisible':[('payment_amount_due', '&lt;=', 0.0)]}"/>
+                            <button name="do_customer_mail" type="object" string="Send Email" groups="account.group_account_user" attrs="{'invisible':[('payment_amount_due', '&lt;=', 0.0)]}"/>
+                            <button name="display_screen" type ="object" string="Display On Screen" groups="account.group_account_user" class="oe_highlight"/>
+                        </div>
+
+                        <field name="statement_ids">
+                            <tree string="Account Move line" editable="false" create="false" delete="false" colors="red:(not date_maturity or date_maturity&lt;=current_date) and result&gt;0">
+                                <field name="date" readonly="True" string="Date"/>
+                                <field name="invoice_no" readonly="True" string="Invoice Number"/>
+                                <field name="date_maturity" readonly="True"/>
+                                <field name="debit" readonly="True" string="Invoices/Debits"/>
+                                <field name="credit" readonly="True" string="Payments/Credits"/>
+                                <field name="result" readonly="True"/>
+                            </tree>
+                        </field>
+
+                        <group class="oe_subtotal_footer oe_right">
+                            <field name="customer_payment_amount_due"/>
+                            <field name="payment_amount_overdue" string="Total Overdue Amount"/>
+                        </group>
+                        <div class="oe_clear"/>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+
+		<!--Adding the Customer Payment Filter in Customer Page -->
+	     <record id="r3x_view_res_partner_filter_inherit" model="ir.ui.view">
+            <field name="name">r3x.res.partner.select.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//filter[@string='Persons']" position="after">
+            		<filter string="Customer Payment" name="type_person" domain="[('1','in','property_payment_term')]"/>
+            	</xpath>
+            </field>
+         </record>
+
+	</data>
+</openerp>
