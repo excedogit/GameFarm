@@ -1,0 +1,7 @@
+Version 			Date(MM/DD/YYYY)				Author					Enhancement
+1.4					08/27/2014						Omkar Pakki				1. Modified Functionality in report to 
+																			   print Multiple payment terms in Pdf and Excel.
+
+1.4					08/28/2014						Omkar Pakki				1. Bug Fixed in Excel Report (Not Due) not Printing.
+
+1.4					09/03/2014						Omkar Pakki				1. Time Zone Field 'Start Date' Updated.
