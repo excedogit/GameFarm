@@ -1,0 +1,12 @@
+V0.6 By Sravani 
+On 16 july 2014
+   *Enhanced the module Added Three new files.
+   		*aged_partner_balance_xls.py in report
+   		*aged_partner_balance_wizard.py in wizards
+   		*aged_partner_balance_wizard.xml in wizard
+   *Changed the line in line 147 in account_financial_report_webkit module as acc.ledger_lines to override 
+   the variable in 	account_financial_report_webkit_xls module.
+   *Added three new columns in the aged_partner_balance_xls.py through the aged_partner_balance.py in account_financial_report_webkit
+         *payment_terms as payment terms
+         *payment_notes as Comments
+         *payment_next_action_data as Next Action Date.
