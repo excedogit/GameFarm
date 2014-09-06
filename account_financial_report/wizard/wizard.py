@@ -310,16 +310,8 @@ class wizard_report(osv.osv_memory):
         if vals['periods']:
             vals.update({'temp_periods':vals['periods'][0][-1]})
             vals['periods']=[]
+        
         create_id=super(wizard_report, self).create(cr, uid, vals, context=context)
         return create_id
-    
-    def write(self, cr, uid, ids, vals, context=None):
-        if vals['periods']:
-            vals['periods']=[]
-        create_id=super(wizard_report, self).write(cr, uid,ids,vals,context=context)
-        return create_id
-
-    
-    
 
 wizard_report()
