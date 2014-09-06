@@ -77,7 +77,7 @@
                             name="periods" 
                             nolabel="1" 
                             domain="[('fiscalyear_id','=',fiscalyear),('special','=',False),('company_id','=',company_id)]"
-                             >
+                             attrs="{'readonly':[('columns','in',('qtr','thirteen'))],}">
                             <tree>
                                 <field name='code'/>
                                 <field name='name'/>
